@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Outfit;
+
+}
+body{
+    background-color: skyblue;
+
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+/**************************************************** Navigation Bar ************************************ */
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(147, 41, 209, 0.249);
+    padding: 10px 20px;
+    color:white;
+}
+.flex{
+    display: flex;
+    align-items: center;
+
+}
+.location{
+    align-items: end;
+    margin-left: 15px;
+    font-size: 13px;
+    color: bisque;
+}
+.nav-search{
+    flex: 1;
+    background: rgb(238, 241, 245);
+    color: gray;
+    max-width: 1000px;
+    border-radius: 4px;
+    margin-left: 15px;
+}
+.nav-search-bar{
+    padding: 10px 20px;
+    gap: 5px;
+    background: rgb(245, 244, 249);
+    border-radius: 4px 0 0 4px;
+
+}
+.input-search{
+    border: none;
+    outline: none;
+    padding-left: 20px;
+    width: 100%;
+}
+.nav-search-icon{
+    max-width: 40px;
+    padding: 8px;
+    background: ghostwhite;
+    border-radius: 0 4px 4px 0;
+
+}
+.nav-lan{
+    gap: 5px;
+    margin-left: 10px;
+    
+
+}
+.nav-text{
+    margin-left: 10px;
+    
+}
+.nav-text p{
+    font-size: 10px;
+}
+.nav-text h1{
+    font-size: 14px;
+}
+.nav-cart{
+    margin-left: 10px;
+}
+.sub-nav{
+    background-color: rgb(139, 138, 168);
+    gap: 10px;
+    padding: 8px;
+}
+.sub-link{
+    gap: 20px;
+    padding: 12px;
+}
+
+/***************************************************  Side Bar ************************************ */
+.side-bar-container-navigation{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: transparent;
+    transform: translateX(-100%);
+    display: flex;
+    transition: transform 0.3s;
+
+
+}
+.side-bar-show{
+    transform: translateX(0%);
+    background: rgba(0,0,0,0.7);
+}
+
+.sidebar-left{
+    background-color: aqua;
+    width: 300px;
+    height: 100%;
+    box-shadow: 5px 5px 10px rgb(0,0,0,0.8);
+}
+.sidebar-top{
+    gap: 5px;
+    background-color: rgb(133, 145, 144);
+    font-size: 18px;
+    padding-left: 30px;
+
+}
+.sidebar-item{
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 10px;
+    padding-left: 30px;
+    border-bottom: solid 1px gray;
+}
+.sidebar-item h2{
+    font-size: 20px;
+
+}
+.sidebar-item p{
+    color: #655e60;
+}
+#sidebar-nav-close{
+    align-self: flex-start;
+    font-size: 30px;
+    background: transparent;
+    color: #f7f5f5;
+    border: none;
+    padding-left: 20px;
+    cursor: pointer;
+
+}
+
+.sidebar-item-scrol{
+    height: 100%;
+    overflow: auto;
+    padding-bottom: 50px;
+}
+
+
+/**************************************************** Header Slider  ************************************ */
+.header-slider ul{
+    overflow-y: hidden;
+}
+.header-img{
+    max-width: 100%;
+    mask-image: linear-gradient(to bottom, #000000 50%, transparent 100%);
+}
+.header-slider a{
+    position: absolute;
+    top: 20%;
+    z-index: 1;
+    padding: 5vh 1vw;
+    background: #ffffff4f;
+    color: rgb(53, 10, 208);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+
+}
+.control-next{
+    right: 0;
+}
+.box-row{
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+    margin: 20px 30px;
+}
+.box-col{
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+    min-height: 200px;
+    max-width: 24%;
+    background: rgb(129, 91, 173);
+    z-index: 1;
+}
+
+.box-col a{
+    font-size: 12px;
+    font-weight: 500;
+    color: aquamarine;
+
+}
+.header-box{
+    margin-top: -15vw;
+}
+
+.product-slider{
+    background: #fff;
+    margin: 0 30px;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.product-slider .products{
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    margin-top: 10px;
+
+}
+.product-slider .products img{
+    max-width: 200px;
+    max-height: 200px;
+
+}
+.product-slider .products::-webkit-scrollbar{
+    display: none;
+}
+
+.products-slider-price{
+    background: #fff;
+    margin: 0 30px;    
+    padding: 20px;
+    margin-bottom: 15px;
+}
+.products-slider-price .products{
+    overflow-x: auto;
+    gap: 20px;
+    margin-top: 10px;
+}
+.products-slider-price .products::-webkit-scrollbar{
+    display: none;
+}
+.products-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    min-width: 200px;
+    background: #fbfbfb;
+}
+.products-card img{
+    width: 100px;
+    margin: 0 50px;
+}
+.product-offer p{
+    background: #be0b3b;
+    color: rgb(148, 156, 156);
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 2px;
+    margin: 8px 0;
+    font-size: 13px;
+}
+.product-offer span{
+    color: rgb(87, 181, 10);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+
+.box-col img{
+    cursor: pointer;
+}
+
+/**************************************************** Footer Section  ************************************ */
+
+footer{
+    justify-content: space-between;
+    color: #fff;
+    background-color: rgb(97, 43, 192);
+    padding: 20px 60px;
+
+}
